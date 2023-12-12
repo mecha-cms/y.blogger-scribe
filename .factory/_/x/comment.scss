@@ -2,18 +2,19 @@
 .comments-body,
 .comments-footer,
 .form-comment {
-  margin-top: 1.15rem;
+  margin-top: 1rem;
 }
 
 .comments {
   h3,
   h4 {
-    color: var(--color-title);
+    color: #1b0431;
     font-size: 125%;
   }
 }
 
 .comment-header {
+  color: #555;
   .comment-author {
     color: inherit;
     font: inherit;
@@ -28,7 +29,7 @@
     textarea {
       + br {
         + small {
-          color: var(--color-2);
+          color: #555;
         }
       }
     }

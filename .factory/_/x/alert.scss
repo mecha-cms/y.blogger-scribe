@@ -1,11 +1,10 @@
 [role='alert'] {
-  background: var(--fill-alert);
-  border: 1px solid;
-  border-color: var(--stroke-alert);
+  background: rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   padding: 0.25em 0.75em;
   text-align: center;
   + article {
-    margin-top: 1.15em;
+    margin-top: 1rem;
   }
   a {
     text-decoration: underline;

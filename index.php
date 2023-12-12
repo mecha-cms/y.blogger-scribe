@@ -3,13 +3,6 @@
 $z = defined('TEST') && TEST ? '.' : '.min.';
 Asset::set(__DIR__ . D . 'index' . $z . 'css', 20);
 
-if ($banner = $state->y->{'blogger-minima'}->banner ?? "") {
-    $style = 'body>div>header{background-image:url(' . $banner . ')}';
-    $style .= 'body>div>header>h1{color:' . ($state->y->{'blogger-minima'}->color->title ?? '#ffffff') . '}';
-    $style .= 'body>div>header>p{color:' . ($state->y->{'blogger-minima'}->color->description ?? '#cccccc') . '}';
-    Asset::set('data:text/css;base64,' . To::base64($style), 20.1);
-}
-
 $GLOBALS['links'] = new Anemone((static function ($links, $state, $url) {
     $index = LOT . D . 'page' . D . trim(strtr($state->route, '/', D), D) . '.page';
     $path = $url->path . '/';
@@ -27,14 +20,14 @@ $GLOBALS['links'] = new Anemone((static function ($links, $state, $url) {
     return $links;
 })([], $state, $url));
 
-$defaults = [
+$states = [
     'route-blog' => '/article',
-    'x.comment.page.type' => 'Markdown',
-    'x.page.page.type' => 'Markdown'
+    'x.comment.page.type' => isset($state->x->comment) ? 'Markdown' : null,
+    'x.page.page.type' => isset($state->x->page) ? 'Markdown' : null
 ];
 
-foreach ($defaults as $k => $v) {
-    !State::get($k) && State::set($k, $v);
+foreach ($states as $k => $v) {
+    !State::get($k) && null !== $v && State::set($k, $v);
 }
 
 if (isset($state->x->alert)) {
@@ -76,8 +69,4 @@ if (isset($state->x->excerpt) && $state->is('page')) {
     Hook::set('page.content', function ($content) {
         return null !== $content ? strtr($content, ["\f" => '<hr id="next:' . $this->id . '" role="doc-pagebreak">']) : null;
     });
-}
-
-if ($skin = $state->y->{'blogger-minima'}->skin->name ?? "") {
-    State::set('[y].skin:' . $skin, true);
 }
