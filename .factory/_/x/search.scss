@@ -1,16 +1,10 @@
 [role='search'] {
-  button {
-    max-width: 56px;
-    overflow: hidden;
-    padding: {
-      left: 0;
-      right: 0;
-    }
-    width: 56px;
-  }
   input {
     flex: 1;
     min-width: 0;
+    + button {
+      flex: initial;
+    }
   }
   p {
     display: flex;

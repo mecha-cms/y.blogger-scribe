@@ -2,18 +2,18 @@
   [role='heading'] {
     padding-left: 1.15rem;
     &::before {
-      color: var(--color-1);
+      color: #bfb186;
     }
   }
   [role='doc-pagelist'] {
     li {
       &::after,
       &::before {
-        border-color: var(--stroke, #000);
+        border-color: #bfb186;
       }
       &:last-child {
         &::after {
-          background: var(--fill, #fff);
+          background: transparent url('content.jpg') repeat-y 50% 50%;
         }
       }
     }
