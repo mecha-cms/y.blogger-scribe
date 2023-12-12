@@ -4,7 +4,7 @@
   display: table;
 }
 
-/*! Originally developed by the Blogger Team on 26 February 2004. */
+/*! Originally developed by the Blogger Team <https://www.blogger.com> on 26 February 2004. */
 
 * {
   background: 0 0;
@@ -464,8 +464,10 @@ textarea {
 @import './_/x/comment';
 @import './_/x/markdown';
 @import './_/x/part';
+@import './_/x/pass';
 @import './_/x/search';
 @import './_/x/t-o-c';
+@import './_/x/user';
 
 body {
   > div {
