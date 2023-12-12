@@ -1,0 +1,3 @@
+<Files ~ '[.](css|gif|js|png)$'>
+  Allow from all
+</Files>

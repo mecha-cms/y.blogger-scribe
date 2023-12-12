@@ -1,0 +1,14 @@
+---
+title: Blogger: Scribe
+description: Scribe (classic Blogger template), ported to Mecha.
+image: /lot/y/blogger-scribe/index.png
+images:
+- /lot/y/blogger-scribe/index.png
+author: Taufik Nurrohman
+link: https://www.styleshout.com/legacy-templates
+type: Markdown
+version: 1.0.0
+...
+
+This is not a clone of the original Scribe template. I didn’t make it from the original source code, but by refactoring
+it using more modern CSS and HTML syntax.
