@@ -20,3 +20,4 @@
   <body>
     <div>
       <?= self::header(); ?>
+      <?= self::nav(); ?>
