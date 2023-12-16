@@ -319,6 +319,7 @@ textarea {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.25);
   color: inherit;
   display: inline-block;
+  font-size: 85%;
   height: 2rem;
   line-height: calc(2rem - 2px);
   outline: 0;
@@ -644,6 +645,30 @@ body > div > nav + div > aside {
   font-size: 85%;
   order: -1;
   width: 150px;
+}
+body > div > header + div > aside [role=button],
+body > div > header + div > aside button,
+body > div > header + div > aside input[type=button],
+body > div > header + div > aside button[type=button],
+body > div > header + div > aside input[type=reset],
+body > div > header + div > aside button[type=reset],
+body > div > header + div > aside input[type=submit],
+body > div > header + div > aside button[type=submit],
+body > div > header + div > aside input,
+body > div > header + div > aside select,
+body > div > header + div > aside textarea,
+body > div > nav + div > aside [role=button],
+body > div > nav + div > aside button,
+body > div > nav + div > aside input[type=button],
+body > div > nav + div > aside button[type=button],
+body > div > nav + div > aside input[type=reset],
+body > div > nav + div > aside button[type=reset],
+body > div > nav + div > aside input[type=submit],
+body > div > nav + div > aside button[type=submit],
+body > div > nav + div > aside input,
+body > div > nav + div > aside select,
+body > div > nav + div > aside textarea {
+  font-size: 100%;
 }
 body > div > header + div > aside > div h3,
 body > div > nav + div > aside > div h3 {
