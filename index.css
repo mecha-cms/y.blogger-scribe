@@ -619,7 +619,6 @@ body > div > header p {
 }
 body > div > nav {
   border-bottom: 1px dotted #bfb186;
-  font-size: 100%;
   line-height: 2.7rem;
 }
 body > div > nav > ul {
@@ -761,29 +760,4 @@ body > div > nav + div > main > article + nav {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
-}
-
-@media (max-width: 680px) {
-  body > div {
-    width: auto;
-  }
-  body > div > header + div,
-  body > div > nav + div {
-    flex-direction: column;
-  }
-  body > div > header + div > aside,
-  body > div > nav + div > aside {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: auto;
-  }
-  body > div > header + div > aside > div,
-  body > div > nav + div > aside > div {
-    flex: 1;
-  }
-  body > div > header + div > aside > div + div,
-  body > div > nav + div > aside > div + div {
-    margin-top: 0;
-  }
 }

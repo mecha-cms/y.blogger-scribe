@@ -2,7 +2,7 @@
 <html class>
   <head>
     <meta charset="utf-8">
-    <meta content="width=device-width" name="viewport">
+    <meta content="width=1024" name="viewport">
     <?php if ($w = w($page->description ?? $site->description ?? "")): ?>
       <meta content="<?= $w; ?>" name="description">
     <?php endif; ?>

@@ -518,7 +518,6 @@ body {
     }
     > nav {
       border-bottom: 1px dotted #bfb186;
-      font-size: 100%;
       line-height: 2.7rem;
       > ul {
         display: flex;
@@ -627,32 +626,6 @@ body {
               display: flex;
               justify-content: space-between;
               margin-top: 1rem;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 680px) {
-  body {
-    > div {
-      width: auto;
-      > header,
-      > nav {
-        + div {
-          flex-direction: column;
-          > aside {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            width: auto;
-            > div {
-              flex: 1;
-              + div {
-                margin-top: 0;
-              }
             }
           }
         }
