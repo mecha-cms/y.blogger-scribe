@@ -160,11 +160,11 @@ var {
 dl,
 ol,
 ul {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 dl {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 fieldset {
@@ -386,6 +386,7 @@ input {
 input {
   &[type='color'],
   &[type='image'] {
+    @extend label;
     box-shadow: none;
     height: 2.25rem;
     padding: 0;
@@ -401,10 +402,10 @@ input {
   &[type='image'],
   &[type='radio'],
   &[type='range'] {
+    @extend label;
     background: 0 0;
     border: 0;
     box-shadow: none;
-    cursor: pointer;
     padding: 0;
   }
   &[type='image'] {
@@ -551,7 +552,6 @@ body {
       + div {
         display: flex;
         gap: 2.5rem;
-        margin: 1rem 0;
         > aside {
           font-size: 85%;
           // Place the secondary bar after the main bar (in the HTML source code) so that web crawler(s) can quickly

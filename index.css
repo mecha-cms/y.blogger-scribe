@@ -135,6 +135,24 @@ details[role=tree] + [role=tree] {
 
 label,
 select,
+input[type=checkbox],
+button[type=checkbox],
+[type=checkbox][role=button],
+input[type=file],
+button[type=file],
+[type=file][role=button],
+input[type=radio],
+button[type=radio],
+[type=radio][role=button],
+input[type=range],
+button[type=range],
+[type=range][role=button],
+input[type=color],
+button[type=color],
+[type=color][role=button],
+input[type=image],
+button[type=image],
+[type=image][role=button],
 details summary {
   cursor: pointer;
   user-select: none;
@@ -143,11 +161,11 @@ details summary {
 dl,
 ol,
 ul {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 dl {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 fieldset {
@@ -422,7 +440,6 @@ button[type=range],
   background: 0 0;
   border: 0;
   box-shadow: none;
-  cursor: pointer;
   padding: 0;
 }
 input[type=image],
@@ -752,7 +769,6 @@ body > div > header + div,
 body > div > nav + div {
   display: flex;
   gap: 2.5rem;
-  margin: 1rem 0;
 }
 body > div > header + div > aside,
 body > div > nav + div > aside {
