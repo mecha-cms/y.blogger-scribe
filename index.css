@@ -68,14 +68,14 @@ var {
 }
 
 s,
-[role=deletion],
-del {
+del,
+[role=deletion] {
   text-decoration: line-through;
 }
 
 u,
-[role=insertion],
-ins {
+ins,
+[role=insertion] {
   text-decoration: underline;
 }
 
@@ -276,12 +276,17 @@ video {
   width: 100%;
 }
 
+* + address,
+* + article,
+* + aside,
 * + blockquote,
 * + details,
+* + div,
 * + dl,
 * + dt,
 * + fieldset,
 * + figure,
+* + footer,
 * + form,
 * + h1,
 * + h2,
@@ -289,10 +294,14 @@ video {
 * + h4,
 * + h5,
 * + h6,
+* + header,
 * + hr,
+* + main,
+* + nav,
 * + ol,
 * + p,
 * + pre,
+* + section,
 * + table,
 * + ul {
   margin-top: 1rem;
@@ -301,15 +310,15 @@ video {
 input,
 button,
 [role=button],
+[type=button][role=button],
+[type=reset][role=button],
+[type=submit][role=button],
 input[type=button],
 button[type=button],
 input[type=reset],
 button[type=reset],
 input[type=submit],
 button[type=submit],
-[type=button][role=button],
-[type=reset][role=button],
-[type=submit][role=button],
 select,
 textarea {
   accent-color: #473624;
@@ -330,15 +339,15 @@ textarea {
 
 button,
 [role=button],
+[type=button][role=button],
+[type=reset][role=button],
+[type=submit][role=button],
 input[type=button],
 button[type=button],
 input[type=reset],
 button[type=reset],
 input[type=submit],
-button[type=submit],
-[type=button][role=button],
-[type=reset][role=button],
-[type=submit][role=button] {
+button[type=submit] {
   background: #60482e linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)) repeat-x 0 0;
   border-width: 0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
@@ -443,10 +452,6 @@ textarea {
   resize: vertical;
 }
 
-[role=status] {
-  color: #555;
-}
-
 :disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -496,14 +501,6 @@ textarea {
   color: #555;
 }
 
-[role=doc-endnotes] {
-  margin-top: 1rem;
-}
-
-[role=doc-pagelist] {
-  margin-top: 1rem;
-}
-
 form[name=pass] {
   padding: 1rem;
 }
@@ -516,19 +513,136 @@ form[name=pass] {
 }
 [role=search] input + button,
 [role=search] button + button,
+[role=search] input[type=button] + button,
+[role=search] button[type=button] + button,
+[role=search] input[type=reset] + button,
+[role=search] button[type=reset] + button,
+[role=search] input[type=submit] + button,
+[role=search] button[type=submit] + button,
 [role=search] [role=button] + button,
-[role=search] input + [role=button],
-[role=search] button + [role=button],
-[role=search] [role=button] + [role=button],
+[role=search] [type=button][role=button] + button,
+[role=search] [type=reset][role=button] + button,
+[role=search] [type=submit][role=button] + button,
 [role=search] input + input[type=button],
 [role=search] button + input[type=button],
+[role=search] input[type=button] + input[type=button],
+[role=search] button[type=button] + input[type=button],
+[role=search] input[type=reset] + input[type=button],
+[role=search] button[type=reset] + input[type=button],
+[role=search] input[type=submit] + input[type=button],
+[role=search] button[type=submit] + input[type=button],
 [role=search] [role=button] + input[type=button],
+[role=search] [type=button][role=button] + input[type=button],
+[role=search] [type=reset][role=button] + input[type=button],
+[role=search] [type=submit][role=button] + input[type=button],
+[role=search] input + button[type=button],
+[role=search] button + button[type=button],
+[role=search] input[type=button] + button[type=button],
+[role=search] button[type=button] + button[type=button],
+[role=search] input[type=reset] + button[type=button],
+[role=search] button[type=reset] + button[type=button],
+[role=search] input[type=submit] + button[type=button],
+[role=search] button[type=submit] + button[type=button],
+[role=search] [role=button] + button[type=button],
+[role=search] [type=button][role=button] + button[type=button],
+[role=search] [type=reset][role=button] + button[type=button],
+[role=search] [type=submit][role=button] + button[type=button],
 [role=search] input + input[type=reset],
 [role=search] button + input[type=reset],
+[role=search] input[type=button] + input[type=reset],
+[role=search] button[type=button] + input[type=reset],
+[role=search] input[type=reset] + input[type=reset],
+[role=search] button[type=reset] + input[type=reset],
+[role=search] input[type=submit] + input[type=reset],
+[role=search] button[type=submit] + input[type=reset],
 [role=search] [role=button] + input[type=reset],
+[role=search] [type=button][role=button] + input[type=reset],
+[role=search] [type=reset][role=button] + input[type=reset],
+[role=search] [type=submit][role=button] + input[type=reset],
+[role=search] input + button[type=reset],
+[role=search] button + button[type=reset],
+[role=search] input[type=button] + button[type=reset],
+[role=search] button[type=button] + button[type=reset],
+[role=search] input[type=reset] + button[type=reset],
+[role=search] button[type=reset] + button[type=reset],
+[role=search] input[type=submit] + button[type=reset],
+[role=search] button[type=submit] + button[type=reset],
+[role=search] [role=button] + button[type=reset],
+[role=search] [type=button][role=button] + button[type=reset],
+[role=search] [type=reset][role=button] + button[type=reset],
+[role=search] [type=submit][role=button] + button[type=reset],
 [role=search] input + input[type=submit],
 [role=search] button + input[type=submit],
-[role=search] [role=button] + input[type=submit] {
+[role=search] input[type=button] + input[type=submit],
+[role=search] button[type=button] + input[type=submit],
+[role=search] input[type=reset] + input[type=submit],
+[role=search] button[type=reset] + input[type=submit],
+[role=search] input[type=submit] + input[type=submit],
+[role=search] button[type=submit] + input[type=submit],
+[role=search] [role=button] + input[type=submit],
+[role=search] [type=button][role=button] + input[type=submit],
+[role=search] [type=reset][role=button] + input[type=submit],
+[role=search] [type=submit][role=button] + input[type=submit],
+[role=search] input + button[type=submit],
+[role=search] button + button[type=submit],
+[role=search] input[type=button] + button[type=submit],
+[role=search] button[type=button] + button[type=submit],
+[role=search] input[type=reset] + button[type=submit],
+[role=search] button[type=reset] + button[type=submit],
+[role=search] input[type=submit] + button[type=submit],
+[role=search] button[type=submit] + button[type=submit],
+[role=search] [role=button] + button[type=submit],
+[role=search] [type=button][role=button] + button[type=submit],
+[role=search] [type=reset][role=button] + button[type=submit],
+[role=search] [type=submit][role=button] + button[type=submit],
+[role=search] input + [role=button],
+[role=search] button + [role=button],
+[role=search] input[type=button] + [role=button],
+[role=search] button[type=button] + [role=button],
+[role=search] input[type=reset] + [role=button],
+[role=search] button[type=reset] + [role=button],
+[role=search] input[type=submit] + [role=button],
+[role=search] button[type=submit] + [role=button],
+[role=search] [role=button] + [role=button],
+[role=search] [type=button][role=button] + [role=button],
+[role=search] [type=reset][role=button] + [role=button],
+[role=search] [type=submit][role=button] + [role=button],
+[role=search] input + [type=button][role=button],
+[role=search] button + [type=button][role=button],
+[role=search] input[type=button] + [type=button][role=button],
+[role=search] button[type=button] + [type=button][role=button],
+[role=search] input[type=reset] + [type=button][role=button],
+[role=search] button[type=reset] + [type=button][role=button],
+[role=search] input[type=submit] + [type=button][role=button],
+[role=search] button[type=submit] + [type=button][role=button],
+[role=search] [role=button] + [type=button][role=button],
+[role=search] [type=button][role=button] + [type=button][role=button],
+[role=search] [type=reset][role=button] + [type=button][role=button],
+[role=search] [type=submit][role=button] + [type=button][role=button],
+[role=search] input + [type=reset][role=button],
+[role=search] button + [type=reset][role=button],
+[role=search] input[type=button] + [type=reset][role=button],
+[role=search] button[type=button] + [type=reset][role=button],
+[role=search] input[type=reset] + [type=reset][role=button],
+[role=search] button[type=reset] + [type=reset][role=button],
+[role=search] input[type=submit] + [type=reset][role=button],
+[role=search] button[type=submit] + [type=reset][role=button],
+[role=search] [role=button] + [type=reset][role=button],
+[role=search] [type=button][role=button] + [type=reset][role=button],
+[role=search] [type=reset][role=button] + [type=reset][role=button],
+[role=search] [type=submit][role=button] + [type=reset][role=button],
+[role=search] input + [type=submit][role=button],
+[role=search] button + [type=submit][role=button],
+[role=search] input[type=button] + [type=submit][role=button],
+[role=search] button[type=button] + [type=submit][role=button],
+[role=search] input[type=reset] + [type=submit][role=button],
+[role=search] button[type=reset] + [type=submit][role=button],
+[role=search] input[type=submit] + [type=submit][role=button],
+[role=search] button[type=submit] + [type=submit][role=button],
+[role=search] [role=button] + [type=submit][role=button],
+[role=search] [type=button][role=button] + [type=submit][role=button],
+[role=search] [type=reset][role=button] + [type=submit][role=button],
+[role=search] [type=submit][role=button] + [type=submit][role=button] {
   flex: initial;
 }
 [role=search] p {
@@ -620,6 +734,7 @@ body > div > header p {
 body > div > nav {
   border-bottom: 1px dotted #bfb186;
   line-height: 2.7rem;
+  margin: 0;
 }
 body > div > nav > ul {
   display: flex;
@@ -642,6 +757,7 @@ body > div > nav + div {
 body > div > header + div > aside,
 body > div > nav + div > aside {
   font-size: 85%;
+  margin: 0;
   order: -1;
   width: 150px;
 }
@@ -698,10 +814,6 @@ body > div > nav + div > aside > div > ul {
   list-style: none;
   margin-left: 0;
 }
-body > div > header + div > aside > div + div,
-body > div > nav + div > aside > div + div {
-  margin-top: 1rem;
-}
 body > div > header + div > main,
 body > div > nav + div > main {
   flex: 1;
@@ -747,10 +859,6 @@ body > div > nav + div > main > article > header p time {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-body > div > header + div > main > article > header + div,
-body > div > nav + div > main > article > header + div {
-  margin-top: 1rem;
-}
 body > div > header + div > main > article + article,
 body > div > nav + div > main > article + article {
   margin-top: 2rem;
@@ -759,5 +867,4 @@ body > div > header + div > main > article + nav,
 body > div > nav + div > main > article + nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
 }
