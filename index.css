@@ -158,6 +158,30 @@ details summary {
   user-select: none;
 }
 
+p > label,
+p > select,
+p > input[type=checkbox],
+p > button[type=checkbox],
+p > [type=checkbox][role=button],
+p > input[type=file],
+p > button[type=file],
+p > [type=file][role=button],
+p > input[type=radio],
+p > button[type=radio],
+p > [type=radio][role=button],
+p > input[type=range],
+p > button[type=range],
+p > [type=range][role=button],
+p > input[type=color],
+p > button[type=color],
+p > [type=color][role=button],
+p > input[type=image],
+p > button[type=image],
+p > [type=image][role=button],
+details p > summary {
+  line-height: calc(2rem - 2px);
+}
+
 dl,
 ol,
 ul {
@@ -350,7 +374,6 @@ textarea {
   font-size: 85%;
   height: 2rem;
   line-height: calc(2rem - 2px);
-  outline: 0;
   padding: 0 0.5rem;
   vertical-align: middle;
   width: 12rem;
@@ -378,14 +401,6 @@ button[type=submit] {
   text-align: center;
   text-decoration: none !important;
   width: auto;
-}
-button:focus,
-[role=button]:focus,
-input[type=button]:focus,
-input[type=reset]:focus,
-input[type=submit]:focus {
-  outline: 1px dotted #eee;
-  outline-offset: -3px;
 }
 
 button::-moz-focus-inner,
@@ -727,6 +742,10 @@ body > div > footer {
 }
 body > div > footer p {
   margin: 0;
+}
+body > div > footer p:only-child {
+  flex: 1;
+  text-align: right;
 }
 body > div > header {
   background-position: 0 100%;

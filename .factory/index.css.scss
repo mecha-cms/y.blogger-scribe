@@ -151,6 +151,10 @@ label {
   user-select: none;
 }
 
+p > label {
+  line-height: calc(2rem - 2px);
+}
+
 dfn,
 em,
 var {
@@ -341,7 +345,6 @@ textarea {
   font-size: 85%;
   height: 2rem;
   line-height: calc(2rem - 2px); // Minus the border width
-  outline: 0;
   padding: 0 0.5rem;
   vertical-align: middle;
   width: 12rem;
@@ -362,10 +365,6 @@ button {
   text-align: center;
   text-decoration: none !important;
   width: auto;
-  &:focus {
-    outline: 1px dotted #eee;
-    outline-offset: -3px;
-  }
 }
 
 input[type='button'],
@@ -504,6 +503,10 @@ body {
       padding: 12px 0 10px;
       p {
         margin: 0;
+        &:only-child {
+          flex: 1;
+          text-align: right;
+        }
       }
     }
     > header {
