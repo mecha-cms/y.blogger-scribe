@@ -285,18 +285,18 @@ var {
   @extend %i;
 }
 
+dl {
+  margin: {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
 ol,
 ul {
   margin-left: 2rem;
   & & {
     margin-left: 1.5rem;
-  }
-}
-
-dl {
-  margin: {
-    left: 1.5rem;
-    right: 1.5rem;
   }
 }
 
@@ -309,6 +309,10 @@ figure {
   text-align: center;
   img {
     display: block;
+    margin: {
+      left: auto;
+      right: auto;
+    }
   }
 }
 
@@ -355,7 +359,6 @@ h6 {
 }
 
 hr {
-  border: 0;
   border-top: 1px dotted #bfb186;
 }
 
@@ -427,6 +430,7 @@ ul {
 
 audio,
 iframe,
+picture,
 video {
   display: block;
   height: auto;
@@ -640,12 +644,11 @@ body {
         gap: 2.5rem;
         > aside {
           font-size: 85%;
+          margin: 0;
           // Place the secondary bar after the main bar (in the HTML source code) so that web crawler(s) can quickly
           // scan the main content, but display the secondary bar as the first column as in the original web design.
-          margin: 0;
           order: -1;
           width: 150px;
-          [role='button'],
           button,
           input,
           select,

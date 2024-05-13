@@ -288,6 +288,11 @@ details[role=tree] + [role=tree] {
   margin-top: 0;
 }
 
+dl {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 ol,
 ul {
   margin-left: 2rem;
@@ -297,11 +302,6 @@ ol ul,
 ul ol,
 ul ul {
   margin-left: 1.5rem;
-}
-
-dl {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
 }
 
 fieldset {
@@ -314,6 +314,8 @@ figure {
 }
 figure img {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 form > p > label {
@@ -355,7 +357,6 @@ h6 {
 }
 
 hr {
-  border: 0;
   border-top: 1px dotted #bfb186;
 }
 
@@ -420,6 +421,7 @@ ul {
 
 audio,
 iframe,
+picture,
 video {
   display: block;
   height: auto;
@@ -673,19 +675,19 @@ body > div > nav + div > aside {
   order: -1;
   width: 150px;
 }
-body > div > header + div > aside [role=button],
 body > div > header + div > aside button,
 body > div > header + div > aside input[type=button],
 body > div > header + div > aside input[type=reset],
 body > div > header + div > aside input[type=submit],
+body > div > header + div > aside [role=button],
 body > div > header + div > aside input,
 body > div > header + div > aside select,
 body > div > header + div > aside textarea,
-body > div > nav + div > aside [role=button],
 body > div > nav + div > aside button,
 body > div > nav + div > aside input[type=button],
 body > div > nav + div > aside input[type=reset],
 body > div > nav + div > aside input[type=submit],
+body > div > nav + div > aside [role=button],
 body > div > nav + div > aside input,
 body > div > nav + div > aside select,
 body > div > nav + div > aside textarea {
